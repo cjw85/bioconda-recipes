@@ -12,7 +12,7 @@ source:
 build:
   # keras is 2.7 or 3.6 only. We need py3: 3.6 is the only possibility
   skip: True # [not py36]
-  number: 1
+  number: 2
   entry_points:
     - medaka = medaka.medaka:main
     - medaka_counts = medaka.medaka_counts:main
@@ -40,6 +40,8 @@ requirements:
     - intervaltree >=3.0.0
     - keras ==2.2.4
     - numpy ==1.16.1
+    # some issues reported on osx with numpy and newer openblas package
+    - openblas ==0.3.3
     - pysam
     - python
     - pyyaml ==5.1
